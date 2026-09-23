@@ -1,0 +1,159 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Practical Application Activity</title>
+</head>
+
+<body>
+
+    <!-- Main heading of the activity -->
+    <h1 id="main-heading">HTML Practical Application Activity</h1>
+
+    <p>
+        This webpage demonstrates Images, Hyperlinks, Multimedia,
+        Useful HTML Tags, and the HTML DOM.
+    </p>
+
+    <!-- ==================== IMAGES ==================== -->
+    <section id="images">
+        <h2>Images</h2>
+
+        <p>Below are three images showcasing sorcerers having a domain clash.</p>
+        
+        <figure>
+        <figcaption>Sendai Colony Clash.</figcaption>
+            <img src="images/image1.png"
+                 alt="Ishigori Ryu releasing domain expansion"
+                 width="100">
+            
+        </figure>
+
+        <img src="images/image2.png"
+             alt="Okkotsu Yuta releasing domain expansion"
+             width="100">
+
+        <img src="images/image3.png"
+             alt="Uro Takako releasing domain expansion"
+             width="100">
+    </section>
+
+
+    <!-- ==================== HYPERLINKS ==================== -->
+    <section id="hyperlinks">
+        <h2>Hyperlinks</h2>
+
+        <!-- Internal link -->
+        <p>
+            <a href="images/image1.png">Internal Link: View an image</a>
+        </p>
+
+        <!-- External link -->
+        <p>
+            <a href="https://myschool.carsu.edu.ph/home"
+               target="_blank">
+                External Link: Visit Carsu
+            </a>
+        </p>
+
+        <!-- Email link -->
+        <p>
+            <a href="mailto:anthonyjoshorbiso@gmail.com">
+                Email Link: Contact Me
+            </a>
+        </p>
+
+        <!-- Same-page anchor link -->
+        <p>
+            <a href="#dom-section">
+                Same-Page Anchor: Go to HTML DOM
+            </a>
+        </p>
+    </section>
+
+
+    <!-- ==================== MULTIMEDIA ==================== -->
+    <section id="multimedia">
+        <h2>Multimedia</h2>
+
+        <h3>Triple Domain Expansion [Sendai Colony]</h3>
+
+        <audio controls>
+            <source src="media/audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h3>Yuta vs Ryu vs Uro [Peak]</h3>
+
+        <video controls width="500">
+            <source src="media/video.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </section>
+
+
+    <!-- ==================== USEFUL TAGS ==================== -->
+    <section id="useful-tags">
+        <h2>Useful Tags</h2>
+
+        <!-- The strong tag emphasizes important information. -->
+        <p>
+            <strong>Important:</strong> HTML structures the content
+            of a webpage.
+        </p>
+
+        <!-- The mark tag highlights important words or phrases. -->
+        <p>
+            HTML is a <mark>markup language</mark> used to create
+            web pages.
+        </p>
+
+        <!-- The blockquote tag is used to display a quotation. -->
+        <blockquote>
+            "The web is for everyone."
+        </blockquote>
+
+        <p>
+            &copy; 2026 HTML Practical Application Activity
+        </p>
+    </section>
+
+
+    <!-- ==================== HTML DOM ==================== -->
+    <section id="dom-section">
+        <h2 id="dom-heading">HTML DOM</h2>
+
+        <p id="dom-description">
+            The HTML DOM represents a webpage as a tree of objects.
+            Each HTML element can be considered a node in this tree.
+        </p>
+
+        <img src="dom-tree.png"
+             alt="Screenshot showing the HTML DOM tree in browser DevTools"
+             width="600">
+
+        <h3>DOM Structure</h3>
+
+        <ul>
+            <li>HTML is the root element.</li>
+            <li>Body is a child of HTML.</li>
+            <li>Sections are children of Body.</li>
+            <li>Headings and paragraphs are children of their sections.</li>
+        </ul>
+    </section>
+
+
+    <!--
+    DOM Parent-Child Explanation:
+    The body element is the parent of the sections that contain the
+    main content of the webpage. The section element is the parent
+    of its heading, paragraphs, images, and other content elements.
+    For example, the dom-section section contains the dom-heading
+    heading and the dom-description paragraph as its child elements.
+    -->
+
+</body>
+</html>
+```
