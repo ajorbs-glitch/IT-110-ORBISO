@@ -1,0 +1,202 @@
+
+/* PART A: RESET AND CSS FUNDAMENTALS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: rgb(240, 244, 248);
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Grouping selector */
+h1, h2 {
+    font-weight: bold;
+}
+
+/* PART B: SELECTORS AND PROPERTIES */
+
+header {
+    background-color: #243b55;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Navigation links */
+nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* Pseudo-class */
+nav a:hover {
+    background-color: #1d4ed8;
+    color: yellow;
+}
+
+/* Pseudo-element */
+h2::before {
+    content: "★ ";
+    color: orange;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #243b55;
+}
+
+/* Class selector */
+.intro {
+    color: #555555;
+    font-size: 1rem;
+}
+
+/*
+CASCADE EXAMPLE:
+Both rules target .intro with equal specificity.
+The second rule wins because it appears later
+in the stylesheet.
+*/
+.intro {
+    color: rgb(30, 80, 150);
+}
+
+/* Descendant selector */
+.card p {
+    margin-bottom: 12px;
+}
+
+/* PART C: BOX MODEL AND LAYOUT */
+
+.card {
+    width: 500px;
+    padding: 20px;
+    border: 2px solid #cccccc;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+/*
+BOX MODEL COMPUTATION:
+Width = 500px
+Padding = 20px left + 20px right
+Border = 2px left + 2px right
+
+Since box-sizing is border-box,
+the total rendered width remains 500px.
+
+Content width = 500 - 40 - 4 = 456px.
+*/
+
+/* ID selector and relative positioning */
+#about {
+    position: relative;
+    border-color: #3b82f6;
+}
+
+/* Absolute positioning with pseudo-element */
+#about::after {
+    content: "PROFILE";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #3b82f6;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+/* PART D: DISPLAY AND VISIBILITY */
+
+/* Flexbox for skills */
+.skills-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+/* Child selector */
+.skills-list > li {
+    background-color: #dbeafe;
+    color: #1e40af;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Removes the element and its space */
+.hide-none {
+    display: none;
+}
+
+/* Hides the element but preserves its space */
+.hide-visibility {
+    visibility: hidden;
+}
+
+/*
+VISIBLE DIFFERENCE:
+display: none removes the paragraph completely,
+so it does not occupy space on the page.
+
+visibility: hidden makes the paragraph invisible,
+but its original space remains in the layout.
+*/
+
+/* Scrollable container */
+.scroll-box {
+    height: 120px;
+    overflow: auto;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    background-color: #243b55;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* REFLECTION QUESTIONS */
+
+/*
+1. The second conflicting rule wins because both
+rules have the same specificity, but the second
+rule appears later in the stylesheet. CSS follows
+the cascade to determine which style is applied.
+
+2. If box-sizing were content-box, the rendered
+width would be 544px.
+500px + 20px + 20px + 2px + 2px = 544px.
+This includes content width, padding, and borders.
+
+3. I would use visibility: hidden when I want
+an element to disappear but still maintain its
+original space in the layout. This is useful
+when I do not want surrounding elements to move.
+*/
