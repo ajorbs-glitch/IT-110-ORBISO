@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo tab-link">CampusHub</a>
+
+        <nav aria-label="Main navigation">
+            <a href="#home" class="nav-link tab-link active">Home</a>
+            <a href="#courses" class="nav-link tab-link">Courses</a>
+            <a href="#contact" class="nav-link tab-link">Contact</a>
+        </nav>
+
+        <label class="theme-toggle">
+            <span>Dark mode</span>
+            <input type="checkbox" id="darkMode" aria-label="Dark mode">
+            <span class="switch"></span>
+        </label>
+    </header>
+
+    <main>
+        <section class="card page" id="home">
+            <div class="avatar">AJ</div>
+            <h1>Anthony Josh Orbiso</h1>
+            <p class="description">BS Information Technology, 2nd Year</p>
+
+            <ul class="skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <div class="buttons">
+                <button id="likeBtn" class="like-button" type="button">
+                    <span>♥ Like</span>
+                    <span id="likeCount">0</span>
+                </button>
+                <button id="resetBtn" class="reset-button" type="button">Reset</button>
+            </div>
+        </section>
+
+        <section class="card page other-page" id="courses" hidden>
+            <h1>Courses</h1>
+            <p class="description">Subjects in CampusHub</p>
+            <ul class="skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+
+        <section class="card page other-page" id="contact" hidden>
+            <h1>Contact</h1>
+            <p class="description">Welcome to the CampusHub contact page.</p>
+        </section>
+    </main>
+
+    <footer>&copy 2026 CampusHub. All rights reserved.</footer>
+</body>
+</html>

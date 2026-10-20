@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f4fa;
+    color: #202438;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 90px;
+    background-color: #211c4b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    position: relative;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav a {
+    color: #dad8e9;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 11px 4px;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: white;
+    border-bottom-color: #a5adfa;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.theme-toggle input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.switch {
+    width: 54px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #78839b;
+    position: relative;
+}
+
+.switch::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 0.2s;
+}
+
+.theme-toggle input:checked + .switch {
+    background-color: #5146e8;
+}
+
+.theme-toggle input:checked + .switch::before {
+    transform: translateX(24px);
+}
+
+.theme-toggle input:focus-visible + .switch {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 20px;
+}
+
+.page[hidden] {
+    display: none;
+}
+
+.card {
+    background-color: white;
+    border-top: 7px solid #5146e8;
+    border-radius: 19px;
+    box-shadow: 0 14px 32px rgba(33, 39, 63, 0.15);
+    text-align: center;
+    width: 505px;
+    max-width: 100%;
+    min-height: 438px;
+    padding: 42px 28px 40px;
+}
+
+.avatar {
+    background-color: #5146e8;
+    color: white;
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 6px;
+}
+
+.description {
+    font-size: 18px;
+    color: #758091;
+}
+
+.skills {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.skills li {
+    background-color: #e5e9ff;
+    color: #4143a8;
+    padding: 6px 17px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 31px;
+}
+
+button {
+    font-family: inherit;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    height: 55px;
+}
+
+.like-button {
+    background-color: #5146e8;
+    color: white;
+    border: 2px solid #5146e8;
+    padding: 0 26px;
+}
+
+#likeCount {
+    display: inline-block;
+    background-color: white;
+    color: #5146e8;
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 1px 10px;
+    margin-left: 9px;
+}
+
+.reset-button {
+    background-color: white;
+    color: #5146e8;
+    border: 2px solid #5146e8;
+    padding: 0 27px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.other-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    color: #798496;
+    font-size: 14px;
+    padding: 10px;
+}
+
+body.dark {
+    background-color: #151a2c;
+    color: white;
+}
+
+body.dark .card {
+    background-color: #272e45;
+}
+
+body.dark .description,
+body.dark footer {
+    color: #c6cbd7;
+}
+
+body.dark .reset-button {
+    background-color: #272e45;
+    color: white;
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 14px 18px;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav {
+        position: static;
+        transform: none;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 25px;
+        height: auto;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .theme-toggle {
+        font-size: 14px;
+    }
+
+    .card {
+        min-height: auto;
+        padding: 35px 18px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+}
